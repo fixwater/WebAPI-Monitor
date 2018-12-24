@@ -1,17 +1,17 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-import { createPersistedState, createSharedMutations } from 'vuex-electron'
+import { createPersistedState, createSharedMutations } from "vuex-electron";
 
-import modules from './modules'
+import Modules from "./modules";
+let { actions, mutations, state } = Modules;
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-export default new Vuex.Store({
-  modules,
-  plugins: [
-    createPersistedState(),
-    createSharedMutations()
-  ],
-  strict: process.env.NODE_ENV !== 'production'
-})
+export const RequestStore = new Vuex.Store({
+  actions,
+  mutations,
+  state,
+  plugins: [createPersistedState(), createSharedMutations()],
+  strict: process.env.NODE_ENV !== "production"
+});
