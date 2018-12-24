@@ -13,7 +13,6 @@ const mutations = {
 
 const actions = {
   setInfo({ commit }, key, value) {
-    console.info("aaa");
     commit("SET_INFO", key, value);
   }
 };

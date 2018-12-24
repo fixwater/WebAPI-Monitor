@@ -82,13 +82,11 @@ export default {
       let time = 0;
 
       this.$data.timeIntervalId = setInterval2(async () => {
-        console.info("before");
         if (time === Number(repeatTime)) {
           this.reset();
           return;
         }
 
-        console.info(time);
         await this.pushInTerminal(host, path);
 
         ++time;
