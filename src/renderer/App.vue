@@ -5,11 +5,24 @@
 </template>
 
 <script>
-  export default {
-    name: 'webapi-monitor'
-  }
+export default {
+  name: "webapi-monitor"
+};
 </script>
 
 <style>
-  /* CSS */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  min-width: 570px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
 </style>
